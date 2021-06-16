@@ -58,6 +58,6 @@ CMD_HELP.update(
         \n\n  •  **Perintah :** `.Waa`\
         \n  •  **Function :** Menjawab salam panjang\
         \n\n  •  **Perintah :** `.L` | `.l`\
-        \n  •  **Function :** Untuk menjawab salam\  
-    "  
+    }    \n  •  **Function :** Untuk menjawab salam\  
+    
 )
