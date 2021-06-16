@@ -48,19 +48,6 @@ async def typewriter(typew):
     await typew.edit("`Wa'alaikumsalam...`")
 
 
-@register(outgoing=True, pattern=r"^\.Wibu(?: |$)(.*)")
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    await typew.edit("`Tidak, Ada Wibu😱`")
-    sleep (1)
-    await typew.edit("`Sekuat Apapun aku jika Bertemu Wibu Aku harus Lari`")
-    sleep (1)
-    await typew.edit("`Kita Harus Berlari Dari Wibu Karena Wibu Adalah Ras Terkuat diBumi`")
-    sleep (1)
-    await typew.edit("`Lari... Ada Wibu Nolep🏃🏃`")
-    sleep (1)
-    await typew.edit("`Dasar Wibu istri kartun `")
-    sleep (2)
 CMD_HELP.update(
     {
         "salam": "**✘ Plugin : **`salam`\
@@ -72,6 +59,5 @@ CMD_HELP.update(
         \n  •  **Function :** Menjawab salam panjang\
         \n\n  •  **Perintah :** `.L` | `.l`\
         \n  •  **Function :** Untuk menjawab salam\  
-    "   \n\n  •  **Perintah :** `.Wibu` | `.wibu`\
-    }   \n  •  **Function :** Berisi pesan untuk wibu\
+    "  
 )
