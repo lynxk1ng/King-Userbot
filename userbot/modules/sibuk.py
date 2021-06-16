@@ -62,10 +62,10 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"**🔥 Sibuk**\n\n╭╼══════════════╾\n**Orang Tampan{ALIVE_NAME} Telah Sibuk!**\
+        await afk_e.edit(f"**🔥 Sibuk**\n\n╭╼══════════════╾\n**Orang Tampan {ALIVE_NAME} Sok" an Sibuk!**\
         \n╰► **Alasan :** `{string}`\n╰╼═════════╾")
     else:
-        await afk_e.edit(f"**🔥 Sibuk**\n\n╭╼══════════════╾\n**Orang Tampan{ALIVE_NAME} Telah Sibuk!**\n╰╼═════════╾")
+        await afk_e.edit(f"**🔥 Sibuk**\n\n╭╼══════════════╾\n**Orang Tampan {ALIVE_NAME} Sok" an  Sibuk!**\n╰╼═════════╾")
     if user.last_name:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "⚡𝗦𝗜𝗕𝗨𝗞⚡"))
     else:
@@ -267,8 +267,8 @@ CMD_HELP.update(
     {
         "sibuk": "**✘ Plugin : **`sibuk`\
         \n\n  •  **Perintah :** `.sibuk`\
-        \n  •  **Function : **Memberi tahu kalau King sedang SIBUK , dan menguubah nama belakang menjadi ⚡️𝗦𝗜𝗕𝗨𝗞⚡️\
-        \n\n  •  **Notes :** __Bila ada orang spam berlebihan ke Anda , tinggal ketik__ `.block`\
+        \n  •  **Function : **Memberi tahu kalau Orang Tampan sedang SIBUK , dan menguubah nama belakang menjadi ⚡️𝗦𝗜𝗕𝗨𝗞⚡️\
+        \n\n  •  **Notes :** __Kalo ada orang spam berlebihan ke Elu , tinggal ketik__ `.block`\
     "
     }
 )
