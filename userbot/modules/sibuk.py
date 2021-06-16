@@ -24,10 +24,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"__🔥 SIBUK__\n\n╭╼══════════════╾\n**Maaf King {ALIVE_NAME} Sedang SIBUK**\n╰╼═════════╾",
-    f"__🔥 SIBUK__\n\n╭╼══════════════╾\n**King {ALIVE_NAME} Sedang SIBUK**\n**Tunggu Sampai Online Kembali**\n╰╼═════════╾",
-    f"__🔥 SIBUK__\n\n╭╼══════════════╾\n**{ALIVE_NAME} Sedang SIBUK**\n**Tunggulah Sampai Online**\n╰╼═════════╾",
-    f"__🔥 SIBUK__\n\n╭╼══════════════╾\n**King {ALIVE_NAME} Sedang SIBUK**\n╰╼═════════╾",
+    f"__🔥 SIBUK__\n\n╭╼══════════════╾\n**Maaf Orang Ganteng {ALIVE_NAME} Sok Sok an SIBUK**\n╰╼═════════╾",
+    f"__🔥 SIBUK__\n\n╭╼══════════════╾\n**Orang Tampan {ALIVE_NAME} Lagi Sok Sok an SIBUK**\n**Tunggu Ampe  Online Lagi**\n╰╼═════════╾",
+    f"__🔥 SIBUK__\n\n╭╼══════════════╾\n**Orang Tampan {ALIVE_NAME} Lagi Sok Sok an SIBUK**\n**Tunggu Ampe Online Lagi**\n╰╼═════════╾",
+    f"__🔥 SIBUK__\n\n╭╼══════════════╾\n**Orang Ganteng {ALIVE_NAME} Lagi Sok Sok an SIBUK**\n╰╼═════════╾",
 ]
 
 
@@ -62,16 +62,16 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"**🔥 Sibuk**\n\n╭╼══════════════╾\n**{ALIVE_NAME} Telah Sibuk!**\
+        await afk_e.edit(f"**🔥 Sibuk**\n\n╭╼══════════════╾\n**{ALIVE_NAME} Lagi Sok Sok an Sibuk!**\
         \n╰► **Alasan :** `{string}`\n╰╼═════════╾")
     else:
-        await afk_e.edit(f"**🔥 Sibuk**\n\n╭╼══════════════╾\n**{ALIVE_NAME} Telah Sibuk!**\n╰╼═════════╾")
+        await afk_e.edit(f"**🔥 Sibuk**\n\n╭╼══════════════╾\n**{ALIVE_NAME} Lagi Sok Sok an Sibuk!**\n╰╼═════════╾")
     if user.last_name:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "⚡𝗦𝗜𝗕𝗨𝗞⚡"))
     else:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="⚡𝗦𝗜𝗕𝗨𝗞⚡"))
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#SIBUK\n**King Telah SIBUK!**")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#SIBUK\n**Orang Tampan telah  SIBUK!**")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -166,8 +166,8 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"🔥 __**PESAN**__\n\n╭╼══════════════╾\n**{ALIVE_NAME} Sedang SIBUK!**\n**Sejak :** {afk_since} Yang Lalu\
-                        \n╰► **Alasan :** `{AFKREASON}`\n╰╼═════════╾")
+                    await mention.reply(f"🔥 __**PESAN**__\n\n╭╼══════════════╾\n**{ALIVE_NAME} Lagi Sok Sok an SIBUK!**\n**Sejak :** {afk_since} Yang Lalu\
+                        \n╰► **Beralasan :** `{AFKREASON}`\n╰╼═════════╾")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
                 USERS.update({mention.sender_id: 1})
@@ -175,7 +175,7 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"🔥 __**PESAN**__\n\n╭╼══════════════╾\n**{ALIVE_NAME} Masih SIBUK**\n**Sejak :** {afk_since} Yang Lalu\
+                        await mention.reply(f"🔥 __**PESAN**__\n\n╭╼══════════════╾\n**{ALIVE_NAME} Lagi Sok Sok an SIBUK**\n**Sejak :** {afk_since} Yang Lalu\
                             \n╰► **Alasan :** `{AFKREASON}`\n╰╼═════════╾")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -243,7 +243,7 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)} Detik`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"🔥 __**PESAN**__\n\n╭╼══════════════╾\n**{ALIVE_NAME} Masih SIBUK Mohon Tunggu!**\n**Sejak :** {afk_since} Yang Lalu\
+                    await sender.reply(f"🔥 __**PESAN**__\n\n╭╼══════════════╾\n**{ALIVE_NAME} Lagi sibuk Mohon Tunggu Ya Kawand!**\n**Sejak :** {afk_since} Yang Lalu\
                         \n╰► **Alasan :** `{AFKREASON}`\n╰╼═════════╾")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -252,7 +252,7 @@ async def afk_on_pm(sender):
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"🔥 __**PESAN**__\n\n╭╼══════════════╾\n**{ALIVE_NAME} Di Bilang Masih SIBUK**\n**Sejak :** {afk_since} Yang Lalu\
+                        await sender.reply(f"🔥 __**PESAN**__\n\n╭╼══════════════╾\n**{ALIVE_NAME} Udh Gua bilang Masih SIBUK**\n**Sejak :** {afk_since} Yang Lalu\
                             \n╰► **Alasan :** `{AFKREASON}`\n╰╼═════════╾")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
