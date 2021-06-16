@@ -6,11 +6,11 @@ from userbot.events import register
 @register(outgoing=True, pattern=r'^\.santet(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`King Telah Mengaktifkan Perintah Santet Online...⚡`")
+    await typew.edit("`Orang Tampan Telah Mengaktifkan Perintah Santet Online...⚡`")
     sleep(2)
-    await typew.edit("`Mencari Nama Orang Ini...🔍`")
+    await typew.edit("`Nyari Nama Ni Orang...🔍`")
     sleep(1)
-    await typew.edit("`Santet Online Segera Dilakukan,Hati Hati Nanti Kejang Kejang Badan Lu`")
+    await typew.edit("`Santet Online  Dilakukan,Hati Hati Nanti Batuk Batuk Ama Muntah Paku Lu`")
     sleep(1)
     await typew.edit("0%")
     number = 1
@@ -313,21 +313,21 @@ async def typewriter(typew):
     sleep(0.03)
     await typew.edit(str(number) + "%   ████████████████▌")
     sleep(1)
-    await typew.edit("`Target Sukses Tersantet Online,Maap Cuman Bercanda:v`")
+    await typew.edit("`Ni Orang Udah Tersantet Online,Maap Cuman Bercanda:v Lagi Gabut Soalnya:v`")
 
 
 @register(outgoing=True, pattern=r'^\.psikopat(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Mau gw bunuh loe?`")
+    await typew.edit("`Apa Mau gw bunuh loe?`")
     sleep(3)
-    await typew.edit("`Sini share lock kalo berani`")
+    await typew.edit("`Sini sherlok kalo berani`")
     sleep(3)
-    await typew.edit("`Okelah kalo emang gak berani`")
+    await typew.edit("`Okelah kalo lu gak berani`")
     sleep(3)
-    await typew.edit("`Gw yang kesana , tunggu loe...`")
+    await typew.edit("`Gw yang kesana , tungguin ya tod...`")
     sleep(2)
-    await typew.edit("`Saatnya beraksi...`")
+    await typew.edit("`Saatnya beraksi Mwehehehe...`")
     sleep(1)
     await typew.edit("`10`℅")
     await typew.edit("`20`℅")
@@ -340,7 +340,7 @@ async def typewriter(typew):
     await typew.edit("`90`℅")
     await typew.edit("`100`℅")
     sleep(1)
-    await typew.edit("`Tapi boong hayuk palepalepale:v`")
+    await typew.edit("`Tapi boong Wahyu palepalepale:v`")
 
 CMD_HELP.update(
     {
