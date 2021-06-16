@@ -1,4 +1,4 @@
-from platform import uname
+Mfrom platform import uname
 from time import sleep
 from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
@@ -52,15 +52,15 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Tidak, Ada Wibu😱`")
-    sleep (0.07)
+    sleep (1)
     await typew.edit("`Sekuat Apapun aku jika Bertemu Wibu Aku harus Lari`")
-    sleep (0.07)
+    sleep (1)
     await typew.edit("`Kita Harus Berlari Dari Wibu Karena Wibu Adalah Ras Terkuat diBumi`")
-    sleep (0.07)
+    sleep (1)
     await typew.edit("`Lari... Ada Wibu Nolep🏃🏃`")
-    sleep (0.07)
+    sleep (1)
     await typew.edit("`Dasar Wibu istri kartun `")
-    
+    sleep (2)
 CMD_HELP.update(
     {
         "salam": "**✘ Plugin : **`salam`\
