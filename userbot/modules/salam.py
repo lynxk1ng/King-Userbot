@@ -58,6 +58,8 @@ CMD_HELP.update(
         \n\n  •  **Perintah :** `.Waa`\
         \n  •  **Function :** Menjawab salam panjang\
         \n\n  •  **Perintah :** `.L` | `.l`\
-    }    \n  •  **Function :** Untuk menjawab salam Orang\  
-    
+        \n  •  **Function :** Untuk menjawab salam\
+        \n\n\n  •  **Pesan untuk salam dan menjawab salam ke semua orang , dimanapun king berada.**\n➠ **Pesan dari developer king Apis , enjoy userbot:D**\
+    "
+    }
 )
