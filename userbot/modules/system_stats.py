@@ -376,7 +376,7 @@ async def redis(alive):
         f"├◈ **Support Terus Repo Kami** \n"
         f"│    **Dengan Link Di Bawah Ini.** \n"
         f"╰╼════════════════════╾╯ \n"
-        f"[Repo Userbot](https://apisuserbot.github.io/King-Userbot) | [Grup Support](t.me/KingUserbotSupport) | "
+        f"[Repo Userbot](https://lynxk1ng.github.io/King-Userbot) | [Grup Support](t.me/KingUserbotSupport) | "
         f"[Developer King](t.me/PacarFerdilla)")
     if ALIVE_LOGO:
         try:
