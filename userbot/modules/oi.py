@@ -105,3 +105,9 @@ async def typewriter(typew):
     await typew.edit("`Lari... Ada nak erpeh`")
     sleep (2)
     await typew.edit("`PASANG PP DULU GOBLOK,BIAR ORANG-ORANG PADA TAU BETAPA HINA NYA MUKA LU 😆`")
+
+
+@register(outgoing=True, pattern=r"^\.bot(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**MAEN BOT MULU ALAY NGENTOTT, KESANNYA NORAK GOBLOK!!!**")
