@@ -670,7 +670,7 @@ async def pin(msg):
     except BadRequestError:
         return await msg.edit(NO_PERM)
 
-    await msg.edit("`Berhasil ngelakuin pin  Pin!`")
+    await msg.edit("`Berhasil ngelakuin Pin!`")
     await sleep(2)
     await msg.delete()
 
@@ -701,8 +701,7 @@ async def kick(usr):
     if not user:
         return await usr.edit("`Tidak Dapat Menemukan Pengguna.`")
 
-    await usr.edit("`Ngelakuin Kick... Makanya Jan tengil nyed.
-..`")
+    await usr.edit("`Ngelakuin Kick... Makanya Jan tengil nyed...`")
 
     try:
         await usr.client.kick_participant(usr.chat_id, user.id)
