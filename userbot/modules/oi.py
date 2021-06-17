@@ -113,7 +113,7 @@ async def typewriter(typew):
     await typew.edit("**MAEN BOT MULU ALAY NGENTOTT, KESANNYA NORAK GOBLOK!!!**")
 
 
-@register(outgoing=True, pattern='^.wibu(?: |$)(.*)')
+@register(outgoing=True, pattern='^.kp(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
