@@ -134,7 +134,7 @@ async def promote(promt):
         pin_messages=True,
     )
 
-    await promt.edit("`Promosikan Pengguna Sebagai Admin... Mohon Menunggu`")
+    await promt.edit("`Ngenaikin Jabatan Lu Jadi Admin..Sabar nyed...`")
     user, rank = await get_user_from_event(promt)
     if not rank:
         rank = "Admin"  # Just in case.
@@ -144,7 +144,7 @@ async def promote(promt):
     # Try to promote if current user is admin or creator
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await promt.edit("`Sukses Mempromosikan Pengguna Ini Sebagai Admin!`")
+        await promt.edit("`Berhasil Naikin Jabatan Lu jadi Admin, Bilang mksh dulu nyedd`")
         await sleep(5)
         await promt.delete()
 
@@ -174,7 +174,7 @@ async def demote(dmod):
         return await dmod.edit(NO_ADMIN)
 
     # If passing, declare that we're going to demote
-    await dmod.edit("`Sedang Melepas Admin...`")
+    await dmod.edit("`Gua lepas admin lu...`")
     rank = "Admin"  # dummy rank, lol.
     user = await get_user_from_event(dmod)
     user = user[0]
@@ -198,7 +198,7 @@ async def demote(dmod):
     # Assume we don't have permission to demote
     except BadRequestError:
         return await dmod.edit(NO_PERM)
-    await dmod.edit("`Admin Sukses Dilepas!`")
+    await dmod.edit("`Berhasil nurunin jadi memb,Makanya nimbrung kntl`")
     await sleep(5)
     await dmod.delete()
 
@@ -228,7 +228,7 @@ async def ban(bon):
         return
 
     # Announce that we're going to whack the pest
-    await bon.edit("`Melakukan Banned...`")
+    await bon.edit("`Xixixixi Gua ban lu`")
 
     try:
         await bon.client(EditBannedRequest(bon.chat_id, user.id, BANNED_RIGHTS))
@@ -248,17 +248,17 @@ async def ban(bon):
     # Shout out the ID, so that fedadmins can fban later
     if reason:
         await bon.edit(
-            r"\\**#Banned_Pengguna**//"
+            r"\\**#Banned_ni orang, Makanya Jan aneh aneh kntl**//"
             f"\n\n**Nama depan:** [{user.first_name}](tg://user?id={user.id})\n"
             f"**Pengguna ID:** `{str(user.id)}`\n"
             f"**Alasan:** `{reason}`"
         )
     else:
         await bon.edit(
-            r"\\**#Banned_Pengguna**//"
+            r"\\**#Banned_ni Orang  **//"
             f"\n\n**Nama depan:** [{user.first_name}](tg://user?id={user.id})\n"
             f"**Pengguna ID:** `{str(user.id)}`\n"
-            f"**Aksi:** `Banned Pengguna by {ALIVE_NAME}`"
+            f"**Aksi:** `Lu diban ama {ALIVE_NAME}`"
         )
     # Announce to the logging group if we have banned the person
     # successfully!
@@ -283,7 +283,7 @@ async def nothanos(unbon):
         return await unbon.edit(NO_ADMIN)
 
     # If everything goes well...
-    await unbon.edit("`Melakukan Unban...`")
+    await unbon.edit("`Menguban dengan gaya...`")
 
     user = await get_user_from_event(unbon)
     user = user[0]
@@ -292,7 +292,7 @@ async def nothanos(unbon):
 
     try:
         await unbon.client(EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await unbon.edit("```Unban Sukses Dilakukan!```")
+        await unbon.edit("```Unban Berhasil,Bilang mksh dulu nyedd..```")
         await sleep(3)
         await unbon.delete()
 
@@ -395,20 +395,20 @@ async def unmoot(unmot):
         return await unmot.edit(NO_SQL)
 
     # If admin or creator, inform the user and start unmuting
-    await unmot.edit("```Melakukan Unmute...```")
+    await unmot.edit("```MengUnmute dengan gaya..bilang makasih dulu nyed```")
     user = await get_user_from_event(unmot)
     user = user[0]
     if not user:
         return
 
     if unmute(unmot.chat_id, user.id) is False:
-        return await unmot.edit("`Kesalahan! Pengguna Sudah Tidak Dibisukan.`")
+        return await unmot.edit("`Ketololan! ni orang udh di UnMute tolol`")
     else:
 
         try:
             await unmot.client(EditBannedRequest(unmot.chat_id, user.id, UNBAN_RIGHTS))
             await unmot.edit(
-                "```Sukses Melakukan Unmute! Pengguna Sudah Tidak Lagi Dibisukan```"
+                "```Sukses Melakukan Unmute ! Bilang mksh dulu nyed```"
             )
             await sleep(3)
             await unmot.delete()
@@ -584,7 +584,7 @@ async def rm_deletedacc(show):
     if not admin and not creator:
         return await show.edit("`Bukan Admin Disini!`")
 
-    await show.edit("`Menghapus Akun Terhapus... Tunggu Sedang Dalam Proses`")
+    await show.edit("`Ngehapus akun zombie... Sabar nyed...`")
     del_u = 0
     del_a = 0
 
@@ -595,7 +595,7 @@ async def rm_deletedacc(show):
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
-                return await show.edit("`Tidak Memiliki Izin Banned Dalam Grup Ini`")
+                return await show.edit("`Tidak Memiliki Izin Banned Dalam Grup Ini,Karena lu Bukan admin tolol ato lu gada izin`")
             except UserAdminInvalidError:
                 del_u -= 1
                 del_a += 1
@@ -603,12 +603,12 @@ async def rm_deletedacc(show):
             del_u += 1
 
     if del_u > 0:
-        del_status = f"`Membersihkan` **{del_u}** `Akun Terhapus`"
+        del_status = f"`Ngebersihin` **{del_u}** `Akun Terhapus Sabar nyed...`"
 
     if del_a > 0:
         del_status = (
             f"Membersihkan **{del_u}** Akun Terhapus "
-            f"\n**{del_a}** `Admin Akun Terhapus Tidak Bisa Dihapus.`"
+            f"\n**{del_a}** `Admin Akun Terhapus Tidak Bisa Dihapus, Makanya demote dulu tolol`"
         )
     await show.edit(del_status)
     await sleep(2)
@@ -618,7 +618,7 @@ async def rm_deletedacc(show):
         await show.client.send_message(
             BOTLOG_CHATID,
             "#MEMBERSIHKAN\n"
-            f"Membersihkan **{del_u}** Akun Terhapus!"
+            f"Ngebersihin **{del_u}** Akun Terhapus!"
             f"\nGRUP: {show.chat.title}(`{show.chat_id}`)",
         )
 
@@ -656,7 +656,7 @@ async def pin(msg):
     to_pin = msg.reply_to_msg_id
 
     if not to_pin:
-        return await msg.edit("`Mohon Balas Ke Pesan Untuk Melakukan Pin.`")
+        return await msg.edit("`Bales ke pesan Tod Buat ngepin `")
 
     options = msg.pattern_match.group(1)
 
@@ -670,7 +670,7 @@ async def pin(msg):
     except BadRequestError:
         return await msg.edit(NO_PERM)
 
-    await msg.edit("`Sukses Melakukan Pin!`")
+    await msg.edit("`Berhasil ngelakuin pin  Pin!`")
     await sleep(2)
     await msg.delete()
 
@@ -701,7 +701,8 @@ async def kick(usr):
     if not user:
         return await usr.edit("`Tidak Dapat Menemukan Pengguna.`")
 
-    await usr.edit("`Melakukan Kick....`")
+    await usr.edit("`Ngelakuin Kick... Makanya Jan tengil nyed.
+..`")
 
     try:
         await usr.client.kick_participant(usr.chat_id, user.id)
@@ -711,11 +712,11 @@ async def kick(usr):
 
     if reason:
         await usr.edit(
-            f"[{user.first_name}](tg://user?id={user.id}) **Telah Dikick Dari Grup**\n**Alasan:** `{reason}`"
+            f"[{user.first_name}](tg://user?id={user.id}) **Udah gua kick dari ini Gc**\n**Alasan:** `{reason}`"
         )
     else:
         await usr.edit(
-            f"[{user.first_name}](tg://user?id={user.id}) **Telah Dikick Dari Grup**"
+            f"[{user.first_name}](tg://user?id={user.id}) **Gua kick dari ni Gc**"
         )
         await sleep(5)
         await usr.delete()
@@ -955,7 +956,7 @@ async def get_bots(show):
 
 CMD_HELP.update(
     {
-        "admin": "**✘ Plugin : **`admin`\
+        "admin": "**✘ Plugin : **`admin`\ 
         \n\n  •  **Perintah :** `.promote <username/reply> <nama title (optional)>`\
         \n  •  **Function : **Mempromosikan member sebagai admin.\
         \n\n  •  **Perintah :** `.demote <username/balas ke pesan>`\
@@ -981,7 +982,7 @@ CMD_HELP.update(
         \n\n  •  **Perintah :** `.bots`\
         \n  •  **Function : **Melihat daftar bot dalam grup.\
         \n\n  •  **Perintah :** `.users` Atau `.users <nama member>`\
-        \n  •  **Function : **Mendapatkan daftar pengguna daam grup.\
+        \n  •  **Function : **Mendapatkan daftar pengguna daam grup.\ Capek Kntl Ngeditnya
     "
     }
 )
