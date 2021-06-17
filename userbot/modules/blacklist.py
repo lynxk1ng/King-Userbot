@@ -43,7 +43,7 @@ async def on_add_black_list(addbl):
     for trigger in to_blacklist:
         sql.add_to_blacklist(addbl.chat_id, trigger.lower())
     await addbl.edit(
-        "`Menambahkan Kata` **{}** `Ke Blacklist Untuk Obrolan Ini`".format(text)
+        "`Nambahin kata` **{}** `Ke Blacklist Buat ini Gc`".format(text)
     )
 
 
@@ -55,7 +55,7 @@ async def on_view_blacklist(listbl):
         for trigger in all_blacklisted:
             OUT_STR += f"`{trigger}`\n"
     else:
-        OUT_STR = "`Tidak Ada Blacklist Dalam Obrolan Ini.`"
+        OUT_STR = "`Gada Blacklist Tod di  Ini Gc.`"
     if len(OUT_STR) > 4096:
         with io.BytesIO(str.encode(OUT_STR)) as out_file:
             out_file.name = "blacklist.text"
