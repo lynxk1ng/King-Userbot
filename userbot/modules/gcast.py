@@ -11,10 +11,10 @@ from userbot import CMD_HELP, bot
 async def gcast(event):
     kinguser = event.pattern_match.group(1)
     if not kinguser:
-        return await event.edit("`King, Mohon Berikan Sebuah Pesan`")
+        return await event.edit("`Kasi Pesan yg mau lu kirim secara global tod`")
     tt = event.text
     msg = tt[6:]
-    kingget = await event.edit("`Sedang Mengirim Pesan Secara Global...⚡️`")
+    kingget = await event.edit("`Lagi ngirim pesan ke semua gc yg lu gabung...`")
     er = 0
     done = 0
     async for x in bot.iter_dialogs():
@@ -25,17 +25,17 @@ async def gcast(event):
                 await bot.send_message(chat, msg)
             except BaseException:
                 er += 1
-    await kingget.edit(f"**Sukses Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**")
+    await kingget.edit(f"**Berhasil girim Pesan lu Tod Ke** `{done}` **Grup, Maaf Tod lu gagal ngirim Pesan Ke** `{er}` **Grup**")
 
 
 @register(outgoing=True, pattern="^.gucast (.*)")
 async def gucast(event):
     kinguser = event.pattern_match.group(1)
     if not kinguser:
-        return await event.edit("`Mohon Berikan Sebuah Pesan`")
+        return await event.edit("`Kasi pesan Yang mau lu kirim tod`")
     tt = event.text
     msg = tt[7:]
-    kingget = await event.edit("`Sedang Mengirim Pivate Messages Secara Global...⚡️`")
+    kingget = await event.edit("`Lagi ngirim pesan PC global..... Sabar Tod...`")
     er = 0
     done = 0
     async for x in bot.iter_dialogs():
@@ -46,16 +46,16 @@ async def gucast(event):
                 await bot.send_message(chat, msg)
             except BaseException:
                 er += 1
-    await kingget.edit(f"**Sukses Mengirim Pesan Ke** `{done}` **Orang, Gagal Mengirim Pesan Ke** `{er}` **Orang.**")
+    await kingget.edit(f"**Berhasil ngirim Pesan Tod Ke** `{done}` **Orang, Gagal ngirim Pesan lu tod Ke** `{er}` **Orang.**")
 
 
 CMD_HELP.update(
     {
         "gcast": "**✘ Plugin : **`Global Broadcast`\
         \n\n  •  **Perintah :** `.ggcast` <Text>`\
-        \n  •  **Function : **Global Group Broadcast. Mengirim Pesan Global Broadcast pesan ke Seluruh Grup Yang King Masuki\
+        \n  •  **Function : **Global Group Broadcast. Mengirim Pesan Global Broadcast pesan ke Seluruh Grup Yang lu Masuki\
         \n\n  •  **Perintah :** `.gucast` <Text>`\
-        \n  •  **Function : **Global Users Broadcast. Kirim Pesan itu Secara Global ke Semua Anggota Group Anda\
+        \n  •  **Function : **Global Users Broadcast. Kirim Pesan itu Secara Global ke Semua memb Group Anda\
      "
     }
 )
