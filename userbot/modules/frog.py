@@ -12,7 +12,7 @@ from userbot import CMD_HELP, bot
 
 @register(outgoing=True, pattern=r"^\.frog (.*)")
 async def honkasays(event):
-    await event.edit("`Sedang Memprosess!!!`")
+    await event.edit("`Lagi ngeproses Sabar Tod!!!`")
     text = event.pattern_match.group(1)
     if not text:
         return await event.edit("`Beri Aku Bebeberapa Teks, Contoh .frog test`")
