@@ -25,7 +25,7 @@ async def gcast(event):
                 await bot.send_message(chat, msg)
             except BaseException:
                 er += 1
-    await kingget.edit(f"**Berhasil girim Pesan lu Tod Ke** `{done}` **Grup, Maaf Tod lu gagal ngirim Pesan Ke** `{er}` **Grup**")
+    await kingget.edit(f"**Berhasil ngirim Pesan lu Tod Ke** `{done}` **Grup, Maaf Tod lu gagal ngirim Pesan Ke** `{er}` **Grup**")
 
 
 @register(outgoing=True, pattern="^.gucast (.*)")
