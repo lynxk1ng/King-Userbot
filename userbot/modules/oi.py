@@ -89,7 +89,7 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("**MENTAL TEMPE**")
     sleep(2)
-    await typew.edit("**LEMBEK NGENTOT🔥**")
+    await typew.edit("**LEMBEK Kau anjenk🔥**")
 
  
 @register(outgoing=True, pattern='^.rp(?: |$)(.*)')
@@ -111,3 +111,18 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**MAEN BOT MULU ALAY NGENTOTT, KESANNYA NORAK GOBLOK!!!**")
+
+
+@register(outgoing=True, pattern='^.wibu(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1)
+    await typew.edit("`Tidak.. Ada kpopers 😱😨`")
+    sleep(2)
+    await typew.edit("`Kita Telah Bertemu Dengan kpopers Yang Terlalu Mendewakan Idol nya`")
+    sleep(2)
+    await typew.edit("`Oleh Karena Itu kita harus Lari🏃🏃`")
+    sleep (2)
+    await typew.edit("`Lari... Ada nak Kpopers Yang Menuhankan Idolnya`")
+    sleep (2)
+    await typew.edit("`Dasar nak Kpopers Menuhankan Idol nya`")
