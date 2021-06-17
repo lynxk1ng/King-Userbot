@@ -130,7 +130,7 @@ async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
     """
-    await dyno.edit("`Mengecek kuota...⚡️`")
+    await dyno.edit("`Ngecheckin Kuota lu Ssbar tod......⚡`")
     await asyncio.sleep(1)
     useragent = (
         'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
@@ -181,7 +181,7 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                f"★ **INFO KUOTA KING** ★\n╔══════━━━━━━━══════╗ \n"
+                f"★ **INFO KUOTA ORANG GANTENG ⚡** ★\n╔══════━━━━━━━══════╗ \n"
                 f" ➠ **Penggunaan Kuota :** `{app.name}` \n"
                 f"• **Hasil** :  `{AppHours}` **Jam** - `{AppMinutes}` **Menit**\n"
                 f"• **Persen** : `{AppPercentage}`**%**\n"
