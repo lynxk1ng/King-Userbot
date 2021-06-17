@@ -955,7 +955,7 @@ async def get_bots(show):
 
 CMD_HELP.update(
     {
-        "admin": "**✘ Plugin : **`admin`\ 
+        "admin": "**✘ Plugin : **`admin`\
         \n\n  •  **Perintah :** `.promote <username/reply> <nama title (optional)>`\
         \n  •  **Function : **Mempromosikan member sebagai admin.\
         \n\n  •  **Perintah :** `.demote <username/balas ke pesan>`\
