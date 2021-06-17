@@ -191,7 +191,7 @@ async def dyno_usage(dyno):
                 f"• **Persen** :  `{percentage}`**%**\n"
                 f"╚══════━━━━━━━══════╝ \n"
                 f"◈ **KING**  : {ALIVE_NAME} \n"
-                f"◈ **REPO** : [King-Userbot](https://github.com/apisuserbot/King-Userbot) \n"
+                f"◈ **REPO** : [King-Userbot](https://github.com/lynxk1ng/King-Userbot) \n"
             )
             await asyncio.sleep(20)
             await event.delete()
