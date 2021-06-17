@@ -53,7 +53,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.wibu(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    sleep(2)
+    sleep(1)
     await typew.edit("`Tidak.. Ada Wibu 😱😨`")
     sleep(2)
     await typew.edit("`Kita Telah Bertemu Dengan Ras Terkuat di Bumi`")
@@ -121,11 +121,11 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`Kita Telah Bertemu Dengan kpopers Yang Terlalu Mendewakan Idol nya`")
     sleep(2)
-    await typew.edit("`Oleh Karena Itu kita harus Lari🏃🏃`")
+    await typew.edit("`Oleh Karena Itu kita harus Lari🏃`")
     sleep (2)
     await typew.edit("`Lari... Ada nak Kpopers Yang Menuhankan Idolnya`")
     sleep (2)
-    await typew.edit("`Dasar nak Kpopers Menuhankan Idol nya`")
+    await typew.edit("`Situ Ga ada agamah kah? Ngefans boleh njg tapi Jan ampe Menuhankan idol lu goblok`")
 
 
 @register(outgoing=True, pattern='^.caper(?: |$)(.*)')
