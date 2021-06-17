@@ -28,10 +28,10 @@ from userbot.events import register
 
 
 KANGING_STR = [
-    "`King Sedang Mencolong Sticker...😳`",
-    "`Saatnya Beraksi , Mencolong Sticker...`",
-    "`Waduh Sticker Lu Bagus Bro , Gw Curi Ya`",
-    "`Wahaha Saatnya Maling Sticker...`",
+    "`Orang Ganteng Sedang Mencolong Stiker`",
+    "`Saatnya Beraksi , Mari Kita Colong...`",
+    "`Buset Stiker lu bagus amat tod , Gw Curi Ya`",
+    "`Wahaha gua curi stiker lu xixixiix...`",
 ]
 
 
