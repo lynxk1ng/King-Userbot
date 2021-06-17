@@ -48,3 +48,19 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("`Rimuru Contributor`")
 # Create by myself @localheart
+
+
+@register(outgoing=True, pattern='^.wibu(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(2)
+    await typew.edit("`Tidak.. Ada Wibu 😱😨`")
+    sleep(2)
+    await typew.edit("`Kita Telah Bertemu Dengan Ras Terkuat di Bumi`")
+    sleep(2)
+    await typew.edit("`Karena Itu kita harus Lari🏃🏃`")
+    sleep (2)
+    await typew.edit("`Lari... Ada Wibu Nolep`")
+    sleep (2)
+    await typew.edit("`Dasar Wibu Istri Kartun`")
+    
