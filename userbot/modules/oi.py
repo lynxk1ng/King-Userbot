@@ -126,3 +126,18 @@ async def typewriter(typew):
     await typew.edit("`Lari... Ada nak Kpopers Yang Menuhankan Idolnya`")
     sleep (2)
     await typew.edit("`Dasar nak Kpopers Menuhankan Idol nya`")
+
+
+@register(outgoing=True, pattern='^.caper(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1)
+    await typew.edit("`Biar apa lu caper begitu?`")
+    sleep(2)
+    await typew.edit("`Ha?? Biar apa anjeng?`")
+    sleep(2)
+    await typew.edit("`Apa Manfaat lu caper Tod??`")
+    sleep (2)
+    await typew.edit("`Kalo Gua Tanya Jawab kntl`")
+    sleep (2)
+    await typew.edit("`Dasar Kang Caper`")
