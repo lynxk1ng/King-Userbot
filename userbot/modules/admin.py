@@ -981,7 +981,7 @@ CMD_HELP.update(
         \n\n  •  **Perintah :** `.bots`\
         \n  •  **Function : **Melihat daftar bot dalam grup.\
         \n\n  •  **Perintah :** `.users` Atau `.users <nama member>`\
-        \n  •  **Function : **Mendapatkan daftar pengguna daam grup.\ Capek Kntl Ngeditnya
+        \n  •  **Function : **Mendapatkan daftar pengguna dalam grup.\
     "
     }
 )
