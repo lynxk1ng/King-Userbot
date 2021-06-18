@@ -3,7 +3,7 @@
 # Yang Ubah Anak Tolol
 # Apis tydack pro
 # Feri pro
-# Abdul pro
+# Lynxking pro 
 
 from telethon.tl.types import (
     MessageEntityMentionName)
@@ -89,8 +89,8 @@ async def gspide(rk):
     except BaseException:
         return await rkp.edit(f"`{ALIVE_NAME}:`**Ketololan! Pengguna kagak dikenal.**")
     if user:
-        if user.id == 1682708454:
-            return await rkp.edit(f"`{ALIVE_NAME}:`**Anda Sepertinya Tidak Bisa Gkick Pengguna Ini , Karena Dia Adalah Abdul yg bikin ni cmd dan gua lynxking kagak tau cara ngerubah nya kek mana**")
+        if user.id == 1852609731 :
+            return await rkp.edit(f"`{ALIVE_NAME}:`**Anda Sepertinya Tidak Bisa Gkick Pengguna Ini , Karena Dia Adalah si Lynxking Yang Tampan**")
         try:
             await rk.client(BlockRequest(user))
             await rk.client(UnblockRequest(user))
