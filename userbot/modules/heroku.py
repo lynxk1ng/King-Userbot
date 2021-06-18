@@ -77,7 +77,7 @@ async def variable(var):
                 await var.edit("`Mohon Ubah BOTLOG Ke True`")
                 return False
     elif exe == "del":
-        await var.edit("`Menghapus Config Vars... `")
+        await var.edit("`Ngehapus config vars lu... `")
         variable = var.pattern_match.group(2)
         if variable == '':
             await var.edit("`Mohon Tentukan Config Vars Yang Mau Anda Hapus`")
@@ -98,7 +98,7 @@ async def variable(var):
 
 @register(outgoing=True, pattern=r'^.set var (\w*) ([\s\S]*)')
 async def set_var(var):
-    await var.edit("`Sedang Menyetel Config Vars`")
+    await var.edit("`Lagi masang convig vars yg lu minta...`")
     variable = var.pattern_match.group(1)
     value = var.pattern_match.group(2)
     if variable in heroku_var:
@@ -108,7 +108,7 @@ async def set_var(var):
                 "**Mengganti Config Vars**:\n"
                 f"`{variable}` = `{value}`"
             )
-        await var.edit("`Sedang Di Proses King, Mohon Menunggu Dalam Beberapa Detik`")
+        await var.edit("`Lagi di Proses tod, Tunggu Beberapa Detik Ya nyed`")
     else:
         if BOTLOG:
             await var.client.send_message(
@@ -116,7 +116,7 @@ async def set_var(var):
                 "**Menambahkan Config Vars**:\n"
                 f"`{variable}` **=** `{value}`"
             )
-        await var.edit("`King Menambahkan Config Vars...`")
+        await var.edit("`nambahin Config Vars...`")
     heroku_var[variable] = value
 
 
@@ -130,7 +130,7 @@ async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
     """
-    await dyno.edit("`Ngecheckin Kuota lu Ssbar tod......⚡`")
+    await dyno.edit("`Ngecheckin Kuota lu Sabar tod......⚡`")
     await asyncio.sleep(1)
     useragent = (
         'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
@@ -190,7 +190,7 @@ async def dyno_usage(dyno):
                 f"• **Sisa** :  `{hours}` **Jam** - `{minutes}` **Menit**\n"
                 f"• **Persen** :  `{percentage}`**%**\n"
                 f"╚══════━━━━━━━══════╝ \n"
-                f"◈ **KING**  : {ALIVE_NAME} \n"
+                f"◈ **Orang Ganteng**  : {ALIVE_NAME} \n"
                 f"◈ **REPO** : [King-Userbot](https://github.com/lynxk1ng/King-Userbot) \n"
             )
             await asyncio.sleep(20)
