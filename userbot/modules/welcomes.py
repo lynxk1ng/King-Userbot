@@ -114,8 +114,8 @@ async def save_welcome(event):
         if BOTLOG_CHATID:
             await event.client.send_message(
                 BOTLOG_CHATID, f"#WELCOME \nID GRUP: {event.chat_id}"
-                "\nKing Memasang Pesan Perintah Welcome Digrup, Ini Adalah Catatan Pesan Welcome "
-                "Mohon Jangan Dihapus King!"
+                "\nOrang Ganteng Memasang Pesan Perintah Welcome Digrup, Ini Adalah Catatan Pesan Welcome "
+                "Jangan Dihapus Ya Tod!"
             )
             msg_o = await event.client.forward_messages(
                 entity=BOTLOG_CHATID,
@@ -130,7 +130,7 @@ async def save_welcome(event):
     elif event.reply_to_msg_id and not string:
         rep_msg = await event.get_reply_message()
         string = rep_msg.text
-    success = "`Sukses Menyimpan Pesan Welcome {}`"
+    success = "`Berhasil Nyimpen pesan Welcome lu {}`"
     if add_welcome_setting(event.chat_id, 0, string, msg_id) is True:
         await event.edit(success.format('Disini'))
     else:
@@ -145,16 +145,16 @@ async def show_welcome(event):
         return await event.edit("`Running on Non-SQL mode!`")
     cws = get_current_welcome_settings(event.chat_id)
     if not cws:
-        return await event.edit("`Disini Tidak Ada Pesan Welcome Yang Anda Simpan King`")
+        return await event.edit("`Di ini Gc lu kagak nyimpen pesan welcome apapun tolol`")
     elif cws and cws.f_mesg_id:
         msg_o = await event.client.get_messages(entity=BOTLOG_CHATID,
                                                 ids=int(cws.f_mesg_id))
         await event.edit(
-            "`Anda Telah Membuat Pesan Welcome Disini`")
+            "`Lu udh nyimpen pesan welcome di sini tod`")
         await event.reply(msg_o.message, file=msg_o.media)
     elif cws and cws.reply:
         await event.edit(
-            "`Anda Telah Membuat Pesan Welcome Disini`")
+            "`Lu udh nyimpen pesan welcome disini Tod`")
         await event.reply(cws.reply)
 
 
@@ -167,7 +167,7 @@ async def del_welcome(event):
     if rm_welcome_setting(event.chat_id) is True:
         await event.edit("`Sukses Menghapus Pesan Welcome`")
     else:
-        await event.edit("`Anda Tidak Menyimpan Pesan Welcome Apapun Disini King`")
+        await event.edit("`Lu kagak nyimpen pesan WELCOME di ini Gc Tolol`")
 
 
 CMD_HELP.update(
