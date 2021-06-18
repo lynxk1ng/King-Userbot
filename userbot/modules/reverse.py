@@ -5,7 +5,7 @@
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
-""" Userbot module for reverse searching stickers and images on Google """
+""" Userbot module for reverse stickers and images on Google """
 
 import io
 import os
@@ -35,11 +35,11 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await img.edit("`King Mohon Balas Ke Sticker`")
+        await img.edit("`Bales ke stiker tolol`")
         return
 
     if photo:
-        await img.edit("`Sedang Mencari Gambar Yang Mirip....`")
+        await img.edit("`Nyari Gambar yg mirip sabar tod...`")
         try:
             image = Image.open(photo)
         except OSError:
@@ -65,11 +65,11 @@ async def okgoogle(img):
 
         if response != 400:
             await img.edit(
-                "`Gambar sudah di upload ke google, Mungkin`"
-                "\n`Mengobok-obok sumber gambar...`"
+                "`Gambar yg lu cari udh di upload ke gugel, Mungkin`"
+                "\n`Mengocok sumber gambar...`"
             )
         else:
-            await img.edit("`Google Menyuruhku Pergi`")
+            await img.edit("`Google nyuruh gua Pergi`")
             return
 
         os.remove(name)
@@ -78,9 +78,9 @@ async def okgoogle(img):
         imgspage = match["similar_images"]
 
         if guess and imgspage:
-            await img.edit(f"[{guess}]({fetchUrl})\n\n`Sedang Mencari Gambar Yang Mirip...`")
+            await img.edit(f"[{guess}]({fetchUrl})\n\n`Nyari Gambar yg mirip sabar Tod....`")
         else:
-            await img.edit("`Maaf King, Saya Tidak Bisa Menemukan Apapun`")
+            await img.edit("`Maaf Ya Tod Gua ga nemuin apa apa`")
             return
 
         if img.pattern_match.group(1):
@@ -149,4 +149,4 @@ async def scam(results, lim):
 
 
 CMD_HELP.update({"reverse": ">⚡𝘾𝙈𝘿⚡`.reverse`"
-                 "\nUsage: Balas gambar/stiker untuk melakukan pencarian terbalik di google"})
+                 "\nUsage: Balas gambar/stiker untuk menjadi Wibu"})
