@@ -53,21 +53,21 @@ async def randomise(items):
 async def sleepybot(time):
     """ For .sleep command, let the userbot snooze for a few second. """
     counter = int(time.pattern_match.group(1))
-    await time.edit("`Saya tidur dulu King...⚡️`")
+    await time.edit("`Bot Ganteng tidur dulu...`")
     if BOTLOG:
         str_counter = time_formatter(counter)
         await time.client.send_message(
             BOTLOG_CHATID,
-            f"Anda membuat bot tidur untuk bot {str_counter}.",
+            f"lu ngebikin bot ganteng tidur.. {str_counter}.",
         )
     sleep(counter)
-    await time.edit("`Oke , saya sudah bangun`")
+    await time.edit("`Oke , Bot ganteng sudah bangun`")
 
 
 @register(outgoing=True, pattern="^.shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await event.edit("`Mematikan King-Userbot....`")
+    await event.edit("`Membunuh bot untuk sementara..`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
@@ -78,7 +78,7 @@ async def killdabot(event):
 
 @register(outgoing=True, pattern="^.restart$")
 async def killdabot(event):
-    await event.edit("`Memulai ulang King-Userbot...`")
+    await event.edit("`Mengrestart bot Ganteng...`")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
@@ -95,7 +95,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "★ **Repo dan file userbot** ★\n"
-        "\n☇ [Repo ⚡️𝗞𝗶𝗻𝗴-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡️](https://github.com/apisuserbot/King-Userbot/blob/King-Userbot/README.md)"
+        "\n☇ [Repo ⚡️𝗞𝗶𝗻𝗴-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡️](https://github.com/lynxk1ng/King-Userbot/blob/King-Userbot/README.md)"
         "\n☇ [Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n☇ [Setup Guide - Google Drive](https://telegra.ph/How-To-Setup-GDrive-11-02)"
         "\n☇ [Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
@@ -122,11 +122,11 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        f"   ✘ **i'm** {DEFAULTUSER} **using userbot** ✘   \n"
+        f"   ✘ **Gua** {DEFAULTUSER} **Ganteng Make userbot** ✘   \n"
         "         🔥 __Thanks for userbot__ 🔥   \n"
-        "✣ **Repo Userbot :** [King-Userbot](https://github.com/apisuserbot/King-Userbot) \n"
-        "✣ **Grup Support :** [Klik Disini](https://t.me/KingUserbotSupport) \n"
-        "✣ **Channel Support :** [Klik Disini](https://t.me/TeamKingUserbot) \n"
+        "✣ **Repo Userbot :** [King-Userbot](https://github.com/lynk1ng/King-Userbot) \n"
+        "✣ **Grup Support :** [Klik Disini](https://t.me/Mengvirtual_Gc) \n"
+        "✣ **Channel Support :** [Klik Disini](https://t.me/gabutseger) \n"
         "✣ **Pemilik :** [Developer King](https://t.me/PacarFerdilla) \n"
         "         ✘ **USERBOT TELEGRAM** ✘ ")
 
@@ -136,11 +136,11 @@ async def repo_is_here(wannasee):
     """ For .string command, just returns the string URL. """
     await wannasee.edit(
         "         ✘ **String Session Userbot** ✘   \n"
-        "          🔥 __Thanks for userbot__ 🔥  \n"
+        "          🔥 __Makasih buat userbot__ 🔥  \n"
         "✣ **Get string session :** [String Session](https://replit.com/@apisuserbot/String-Session?v=1) \n"
-        "✣ **Grup Support :** [Klik Disini](https://t.me/KingUserbotSupport) \n"
-        "✣ **Channel Support :** [Klik Disini](https://t.me/TeamKingUserbot) \n"
-        "✣ **Pemilik :** [Developer King](https://t.me/PacarFerdilla) \n"
+        "✣ **Grup Support :** [Klik Disini](https://t.me/Mengvirtual_Gc) \n"
+        "✣ **Channel Support :** [Klik Disini](https://t.me/gabutseger) \n"
+        "✣ **Pemilik :** [Developer King](https://t.me/lynx_king) \n"
         "         ✘ **USERBOT TELEGRAM** ✘ ")
 
 
@@ -148,12 +148,12 @@ async def repo_is_here(wannasee):
 async def repo_is_here(wannasee):
     """ For .tutorial command, just returns the tutorial URL. """
     await wannasee.edit(
-        "         ✘ **Tutorial Using Userbot** ✘   \n"
-        "          🔥 __Thanks for userbot__ 🔥  \n"
+        "         ✘ **Tutorial Make Userbot** ✘   \n"
+        "          🔥 __Makasih Buat userbot__ 🔥  \n"
         "✣ **Tutorial :** [Tutorial Deploy](https://t.me/TeamKingUserbot/16) \n"
-        "✣ **Grup Support :** [Klik Disini](https://t.me/KingUserbotSupport) \n"
-        "✣ **Channel Support :** [Klik Disini](https://t.me/TeamKingUserbot) \n"
-        "✣ **Pemilik :** [Developer King](https://t.me/PacarFerdilla) \n"
+        "✣ **Grup Support :** [Klik Disini](https://t.me/Mengvirtual_Gc) \n"
+        "✣ **Channel Support :** [Klik Disini](https://t.me/gabutseger) \n"
+        "✣ **Pemilik :** [Developer King](https://t.me/lynx_king) \n"
         "          ✘ **USERBOT TELEGRAM** ✘ ")
 
 
@@ -192,15 +192,15 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await img.edit("`Harap Balas Di Gambar King`")
+        await img.edit("`Reply Gambar/stiker tod`")
         return
 
     if photo:
-        await img.edit("`Sedang Memproses...`")
+        await img.edit("`Lagi ngeproses...`")
         try:
             image = Image.open(photo)
         except OSError:
-            await img.edit('`Gambar tidak di dukung`')
+            await img.edit('`Gambar lu kagak di dukung`')
             return
         name = "okgoogle.png"
         image.save(name, "PNG")
@@ -217,10 +217,10 @@ async def okgoogle(img):
         fetchUrl = response.headers['Location']
 
         if response != 400:
-            await img.edit("`Gambar berhasil diunggah ke Google. Mungkin.`"
+            await img.edit("`Gambar lu berhasil diunggah ke Google. Maybe.`"
                            "\n`Sumber parsing sekarang. Mungkin.`")
         else:
-            await img.edit("`Google menyuruhku pergi.`")
+            await img.edit("`Google nyuruh gua pergi.`")
             return
 
         os.remove(name)
@@ -230,9 +230,9 @@ async def okgoogle(img):
         imgspage = match['similar_images']
 
         if guess and imgspage:
-            await img.edit(f"[{guess}]({fetchUrl})\n\n`Sedang Mencari gambar...`")
+            await img.edit(f"[{guess}]({fetchUrl})\n\n`Lagi nyari gambar...`")
         else:
-            await img.edit("`Tidak dapat menemukan apa pun untuk pantat jelekmu.`")
+            await img.edit("`Kagak nemuin apa apa buat muka jelek lu.`")
             return
 
         if img.pattern_match.group(1):
@@ -301,10 +301,10 @@ async def scam(results, lim):
 
 @register(outgoing=True, pattern=r"^\.send (.*)")
 async def send(event):
-    await event.edit("`Sedang Memproses...`")
+    await event.edit("`Lagi Ngeproses...`")
 
     if not event.is_reply:
-        return await event.edit("`Mohon Balas ke pesan King!`")
+        return await event.edit("`Reply ke pesan Tolol!`")
 
     chat = event.pattern_match.group(1)
     try:
@@ -315,7 +315,7 @@ async def send(event):
     message = await event.get_reply_message()
 
     await event.client.send_message(entity=chat, message=message)
-    await event.edit(f"`Mengirim pesan ini ke` `{chat.title}``!`")
+    await event.edit(f"`ngirimin ini Pesan ke` `{chat.title}``!`")
 
 
 CMD_HELP.update(
