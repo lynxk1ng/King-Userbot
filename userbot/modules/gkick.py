@@ -27,7 +27,7 @@ async def get_user_from_event(event):
         if user.isnumeric():
             user = int(user)
         if not user:
-            await event.edit(f"`{ALIVE_NAME}`: ** Harus Mereply Dengan Username Pengguna!**")
+            await event.edit(f"`{ALIVE_NAME}`: ** Reply trus kasi username nya ya tolol 😊😊**")
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
@@ -65,11 +65,11 @@ async def gspide(rk):
     sender = await lazy.get_sender()
     me = await lazy.client.get_me()
     if not sender.id == me.id:
-        rkp = await lazy.reply("`Memproses Gkick...`")
+        rkp = await lazy.reply("`Ngeproses Gkick...`")
     else:
-        rkp = await lazy.edit("`Memproses Gkick...`")
+        rkp = await lazy.edit("`Ngeproses Gkick...`")
     me = await rk.client.get_me()
-    await rkp.edit(f"`{ALIVE_NAME}:` **Meminta untuk mengkick pengguna!**")
+    await rkp.edit(f"`{ALIVE_NAME}:` **Si Tampan ngekick global, Makanya Jan jadi Wibu kntl!**")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await rk.get_chat()
@@ -87,10 +87,10 @@ async def gspide(rk):
         if not reason:
             reason = 'Private'
     except BaseException:
-        return await rkp.edit(f"`{ALIVE_NAME}:`**Kesalahan! Pengguna tidak dikenal.**")
+        return await rkp.edit(f"`{ALIVE_NAME}:`**Ketololan! Pengguna kagak dikenal.**")
     if user:
         if user.id == 1682708454:
-            return await rkp.edit(f"`{ALIVE_NAME}:`**Anda Sepertinya Tidak Bisa Gkick Pengguna Ini , Karena Dia Adalah Pembuat Saya 😈**")
+            return await rkp.edit(f"`{ALIVE_NAME}:`**Anda Sepertinya Tidak Bisa Gkick Pengguna Ini , Karena Dia Adalah Abdul yg bikin ni cmd dan gua lynxking kagak tau cara ngerubah nya kek mana**")
         try:
             await rk.client(BlockRequest(user))
             await rk.client(UnblockRequest(user))
@@ -102,12 +102,12 @@ async def gspide(rk):
                 await rk.client.edit_permissions(i, user, view_messages=False)
                 await rk.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await rkp.edit(f"`{ALIVE_NAME}:` **Meminta untuk mengkick pengguna!\nGkicked {a} chat.....**")
+                await rkp.edit(f"`{ALIVE_NAME}:` **Si Tampan Meminta untuk mengkick pengguna!\nGkicked {a} chat.....**")
 
             except BaseException:
                 b += 1
     else:
-        await rkp.edit(f"`{ALIVE_NAME}:` **Balas ke pengguna !! **")
+        await rkp.edit(f"`{ALIVE_NAME}:` **Balas ke pengguna Tolol!! **")
 
     return await rkp.edit(f"`{ALIVE_NAME}:` **GKicked [{user.first_name}](tg://user?id={user.id}) dalam {a} chat(s) **")
 
@@ -115,7 +115,7 @@ CMD_HELP.update(
     {
         "gkick": "**✘ Plugin : **`gkick`\
         \n\n  •  **Perintah :** `.gkick` <text>`\
-        \n  •  **Function : **Melakukan Sebuah Nge Kick Orang Secara Global Hampir Sama Dengan Gban Cuman Bedanya Ini Nge Kick.\
+        \n  •  **Function : **Melakukan Sebuah Nge Kick Orang Secara Global Hampir Sama Dengan Gban Cuman Bedanya Ini Nge Kick, Kalo gamau dikick Jan jadi Wibu\
     "
     }
 )
