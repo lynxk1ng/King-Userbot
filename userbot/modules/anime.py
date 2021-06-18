@@ -198,13 +198,13 @@ def replace_text(text):
 async def anime(event):
     query = event.pattern_match.group(1)
     reply = await event.get_reply_message()
-    await event.edit("`Searching Anime...`")
+    await event.edit("`Nyari kartun Jepang sabar tod...`")
     if query:
         pass
     elif reply:
         query = reply.text
     else:
-        await event.edit("`Bruh.. What I am supposed to search ?`")
+        await event.edit("`Kasih gua kartun Jepang yg mau lu cari tolol`")
         await asyncio.sleep(6)
         await event.delete()
         return
