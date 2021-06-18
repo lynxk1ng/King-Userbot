@@ -26,7 +26,7 @@ async def help(event):
         if args in CMD_HELP:
             await event.edit(str(CMD_HELP[args]))
         else:
-            await event.edit(f"**❗️Plugin Tidak Valid❗️**\n**King** {DEFAULTUSER} **Sepertinya Tidak Ada Plugin Itu**")
+            await event.edit(f"**❗️Ketololan! Tu plugin gada nyet❗️**\n**King** {DEFAULTUSER} **Gada plugin kek gitu tolol**")
             await asyncio.sleep(200)
             await event.delete()
     else:
@@ -38,6 +38,6 @@ async def help(event):
                          f"**◑» King** {DEFAULTUSER}\n**◑» Plugins :** `{len(modules)}`\n\n"
                          "**❒ Main Menu ↯**\n"
                          f"╰►| {string} ◄─\n\n")
-        await event.reply(f"\n**◑» Perintah Plugin**\n\n**Contoh** : **Ketik** `.help afk` **Untuk Informasi Pengunaan.\nAtau Bisa Juga Ketik** `.helpme` **Untuk Main Menu Yang Lain-Nya.**")
+        await event.reply(f"\n**◑» Perintah Plugin**\n\n**Contoh** : **Ketik** `.help afk` **Untuk Menjadi Wibu.\nAtau Bisa Juga Ketik** `.helpme` **Untuk Main Menu Yang Lain-Nya.**")
         await asyncio.sleep(1000)
         await event.delete()
