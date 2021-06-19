@@ -91,8 +91,8 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > 3:
                 await event.respond(
-                    "🔥 **BLOKIR OTOMATIS**\n\n`Elu Di Blokir Karna Melakukan Spam Pesan Ke Orang Tampan`\n"
-                    f"`Ke Room Chat King {DEFAULTUSER}`"
+                    "🔥 **BLOKIR OTOMATIS**\n\n`Elu Di Blokir Karna Melakukan Spam Pesan Ke Room Chat`\n"
+                    f"` {DEFAULTUSER} Si Tampan`"
                 )
 
                 try:
