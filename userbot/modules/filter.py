@@ -60,7 +60,7 @@ async def add_new_filter(new_handler):
         if BOTLOG_CHATID:
             await new_handler.client.send_message(
                 BOTLOG_CHATID, f"#FILTER\nID OBROLAN: {new_handler.chat_id}\nTRIGGER: {keyword}"
-                "\n\n`Pesan Berikut Disimpan Sebagai Data Balasan Filter Untuk Obrolan, Jangan Dihapus Tod`"
+                "\n\n`Pesan Berikut Disimpan Sebagai Data Balasan Filter Untuk Obrolan, Jangan Di hapus Tod`"
             )
             msg_o = await new_handler.client.forward_messages(
                 entity=BOTLOG_CHATID,
@@ -94,7 +94,7 @@ async def remove_a_filter(r_handler):
         await r_handler.edit("`Filter` **{}** `Kagak Ada Disini`.".format(filt))
     else:
         await r_handler.edit(
-            "`Sukses Menghapus Filter` **{}** `Disini`.".format(filt))
+            "`Berhasil ngehapus Filter` **{}** `Disini`.".format(filt))
 
 
 @register(outgoing=True, pattern="^.bersihkanbotfilter (.*)")
@@ -103,8 +103,8 @@ async def kick_marie_filter(event):
         Marie(or her clones) filters from a chat. """
     bot_type = event.pattern_match.group(1).lower()
     if bot_type not in ["marie", "rose"]:
-        return await event.edit("`Itu Bot Kagak Didukung!`")
-    await event.edit("```Bot Ganteng Akan Menghapus Semua Filter!```")
+        return await event.edit("`Bot Itu Belum Didukung!`")
+    await event.edit("```Gua Bakal hapus Semua Filter!```")
     await sleep(3)
     resp = await event.get_reply_message()
     filters = resp.text.split("-")[1:]
@@ -116,7 +116,7 @@ async def kick_marie_filter(event):
             await event.reply("/stop %s" % (i.strip()))
         await sleep(0.3)
     await event.respond(
-        "```Berhasil ngehapus Filter Lu!```")
+        "```Sukses ngehapus Semua Filter Elu!```")
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID, "Saya Membersihkan Semua Filter Bot Di " + str(event.chat_id))
@@ -129,11 +129,11 @@ async def filters_active(event):
         from userbot.modules.sql_helper.filter_sql import get_filters
     except AttributeError:
         return await event.edit("`Running on Non-SQL mode!`")
-    transact = "`Tidak Ada Filter Apapun Disini.`"
+    transact = "`Kagak Ada Filter Apapun Disini.`"
     filters = get_filters(event.chat_id)
     for filt in filters:
-        if transact == "`Kagak Ada Filter Apapun Disini Tod.`":
-            transact = "**Filter Orang Tampan Yang Aktif Disini :**\n"
+        if transact == "`Kagak Ada Filter Apapun Disini.`":
+            transact = "**Daftar Filter elu Yang Aktif Di ini Gc  :**\n"
             transact += " ⎆ `{}`\n".format(filt.keyword)
         else:
             transact += " ⎆ `{}`\n".format(filt.keyword)
