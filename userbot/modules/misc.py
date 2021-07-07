@@ -125,9 +125,9 @@ async def repo_is_here(wannasee):
         f"   ✘ **Gua** {DEFAULTUSER} **Ganteng Make userbot** ✘   \n"
         "         🔥 __Thanks for userbot__ 🔥   \n"
         "✣ **Repo Userbot :** [King-Userbot](https://github.com/lynk1ng/King-Userbot) \n"
-        "✣ **Grup Support :** [Klik Disini](https://t.me/Mengvirtual_Gc) \n"
-        "✣ **Channel Support :** [Klik Disini](https://t.me/gabutseger) \n"
-        "✣ **Pemilik :** [Developer King](https://t.me/PacarFerdilla) \n"
+        "✣ **Grup Support :** [Klik Disini](https://t.me/Virtual_Gc) \n"
+        "✣ **Channel Support :** [Klik Disini](https://t.me/Virtual_info) \n"
+        "✣ **Pemilik :** [Userbot King](https://t.me/lynx_king) \n"
         "         ✘ **USERBOT TELEGRAM** ✘ ")
 
 
@@ -138,8 +138,8 @@ async def repo_is_here(wannasee):
         "         ✘ **String Session Userbot** ✘   \n"
         "          🔥 __Makasih buat userbot__ 🔥  \n"
         "✣ **Get string session :** [String Session](https://replit.com/@apisuserbot/String-Session?v=1) \n"
-        "✣ **Grup Support :** [Klik Disini](https://t.me/Mengvirtual_Gc) \n"
-        "✣ **Channel Support :** [Klik Disini](https://t.me/gabutseger) \n"
+        "✣ **Grup Support :** [Klik Disini](https://t.me/Virtual_Gc) \n"
+        "✣ **Channel Support :** [Klik Disini](https://t.me/Virtual_info) \n"
         "✣ **Pemilik :** [Developer King](https://t.me/lynx_king) \n"
         "         ✘ **USERBOT TELEGRAM** ✘ ")
 
@@ -151,9 +151,9 @@ async def repo_is_here(wannasee):
         "         ✘ **Tutorial Make Userbot** ✘   \n"
         "          🔥 __Makasih Buat userbot__ 🔥  \n"
         "✣ **Tutorial :** [Tutorial Deploy](https://t.me/TeamKingUserbot/16) \n"
-        "✣ **Grup Support :** [Klik Disini](https://t.me/Mengvirtual_Gc) \n"
-        "✣ **Channel Support :** [Klik Disini](https://t.me/gabutseger) \n"
-        "✣ **Pemilik :** [Developer King](https://t.me/lynx_king) \n"
+        "✣ **Grup Support :** [Klik Disini](https://t.me/Virtual_Gc) \n"
+        "✣ **Channel Support :** [Klik Disini](https://t.me/Virtual_info) \n"
+        "✣ **Pemilik :** [Userbot King](https://t.me/lynx_king) \n"
         "          ✘ **USERBOT TELEGRAM** ✘ ")
 
 
