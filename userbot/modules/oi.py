@@ -141,3 +141,22 @@ async def typewriter(typew):
     await typew.edit("`Kalo Gua Tanya Jawab kntl`")
     sleep (2)
     await typew.edit("`Dasar Kang Caper`")
+
+
+
+@register(outgoing=True, pattern=r"^\.Wibu(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`YNTKTS`")
+    sleep (2)
+    await typew.edit("`YO`")
+    sleep (2)
+    await typew.edit("`NDAK`")
+    sleep (2)
+    await typew.edit("`TAU`")
+    sleep (2)
+    await typew.edit("`KOK`")
+    sleep (2)
+    await typew.edit("`TANYA`")
+    sleep (2)
+    await typew.edit("`SAYA`")
