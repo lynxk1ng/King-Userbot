@@ -5,7 +5,7 @@ from userbot.events import register
 @register(outgoing=True, pattern='^.apis(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    sleep(3)
+    sleep(3) 
     await typew.edit("`Hai Perkenalkan Namaku Apis`")
     sleep(3)
     await typew.edit("`14 Tahun`")
@@ -144,7 +144,7 @@ async def typewriter(typew):
 
 
 
-@register(outgoing=True, pattern=r"^\.Wibu(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.YNTKTS(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`YNTKTS`")
